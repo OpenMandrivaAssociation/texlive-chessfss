@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /macros/latex/contrib/chessfss
+# catalog-date 2008-08-17 13:56:26 +0200
+# catalog-license lppl
+# catalog-version 1.2a
 Name:		texlive-chessfss
 Version:	1.2a
 Release:	1
@@ -80,6 +86,7 @@ contains also a section about installation of chess fonts.
 #- source
 %doc %{_texmfdistdir}/source/latex/chessfss/chessfss-src.dtx
 %doc %{_texmfdistdir}/source/latex/chessfss/chessfss.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -90,3 +97,5 @@ contains also a section about installation of chess fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
