@@ -6,7 +6,7 @@
 # catalog-version 1.2a
 Name:		texlive-chessfss
 Version:	1.2a
-Release:	6
+Release:	7
 Summary:	A package to handle chess fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chessfss
