@@ -1,19 +1,13 @@
-# revision 19440
-# category Package
-# catalog-ctan /macros/latex/contrib/chessfss
-# catalog-date 2008-08-17 13:56:26 +0200
-# catalog-license lppl
-# catalog-version 1.2a
 Name:		texlive-chessfss
-Version:	1.2a
-Release:	11
+Version:	19440
+Release:	1
 Summary:	A package to handle chess fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chessfss
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.r19440.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.doc.r19440.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.source.r19440.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ single chess symbols and simple diagrams. The documentation
 contains also a section about installation of chess fonts.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -79,25 +73,11 @@ contains also a section about installation of chess fonts.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2a-2
-+ Revision: 750153
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2a-1
-+ Revision: 718050
-- texlive-chessfss
-- texlive-chessfss
-- texlive-chessfss
-- texlive-chessfss
-- texlive-chessfss
-
