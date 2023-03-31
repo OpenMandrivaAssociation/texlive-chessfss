@@ -1,6 +1,6 @@
 Name:		texlive-chessfss
 Version:	19440
-Release:	1
+Release:	2
 Summary:	A package to handle chess fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chessfss
