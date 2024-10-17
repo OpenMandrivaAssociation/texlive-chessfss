@@ -3,7 +3,7 @@ Version:	19440
 Release:	2
 Summary:	A package to handle chess fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chessfss
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/chessfss
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chessfss.doc.r%{version}.tar.xz
